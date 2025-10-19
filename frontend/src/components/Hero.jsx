@@ -67,6 +67,7 @@ export const Hero = () => {
             <Button
               size="lg"
               className="bg-gradient-primary hover:opacity-90 text-lg px-8 py-6 rounded-xl shadow-elegant btn-hover-lift group"
+              onClick={handleConsultationClick}
             >
               ESG ve Finans Danışmanlığı Alın
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -75,6 +76,7 @@ export const Hero = () => {
               size="lg"
               variant="outline"
               className="text-lg px-8 py-6 rounded-xl border-2 hover:bg-muted transition-all"
+              onClick={handleExploreClick}
             >
               Uzmanlığımızı Keşfedin
             </Button>
