@@ -9,6 +9,20 @@ export const Hero = () => {
     { icon: <Calculator className="w-5 h-5" />, text: 'Muhasebe Çözümleri' },
   ];
 
+  const handleConsultationClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleExploreClick = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
