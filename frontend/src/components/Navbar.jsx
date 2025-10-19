@@ -50,11 +50,19 @@ export const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <button 
+              onClick={handleLanguageToggle}
+              className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted"
+            >
               <Globe className="w-4 h-4" />
-              <span>EN</span>
+              <span>{language}</span>
             </button>
-            <Button variant="default" size="default" className="bg-gradient-primary hover:opacity-90 transition-opacity">
+            <Button 
+              variant="default" 
+              size="default" 
+              className="bg-gradient-primary hover:opacity-90 transition-opacity"
+              onClick={handleConsultationClick}
+            >
               Ücretsiz Danışmanlık
             </Button>
           </div>
