@@ -91,11 +91,19 @@ export const Navbar = () => {
               </a>
             ))}
             <div className="pt-4 space-y-3">
-              <button className="w-full flex items-center justify-center space-x-2 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <button 
+                onClick={handleLanguageToggle}
+                className="w-full flex items-center justify-center space-x-2 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted"
+              >
                 <Globe className="w-4 h-4" />
-                <span>EN</span>
+                <span>{language}</span>
               </button>
-              <Button variant="default" size="default" className="w-full bg-gradient-primary">
+              <Button 
+                variant="default" 
+                size="default" 
+                className="w-full bg-gradient-primary"
+                onClick={handleConsultationClick}
+              >
                 Ücretsiz Danışmanlık
               </Button>
             </div>
