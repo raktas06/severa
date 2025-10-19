@@ -4,6 +4,7 @@ import { Button } from './ui/button';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [language, setLanguage] = useState('TR');
 
   const navItems = [
     { label: 'Ana Sayfa', href: '#home', icon: '🏠' },
@@ -13,6 +14,20 @@ export const Navbar = () => {
     { label: 'Referanslar', href: '#references', icon: '🎯' },
     { label: 'İletişim', href: '#contact', icon: '📞' },
   ];
+
+  const handleLanguageToggle = () => {
+    const newLang = language === 'TR' ? 'EN' : 'TR';
+    setLanguage(newLang);
+    alert(`Dil değiştirildi: ${newLang}\n\nÇok dilli destek yakında eklenecek!`);
+  };
+
+  const handleConsultationClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
